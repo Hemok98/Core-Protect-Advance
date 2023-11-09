@@ -1,0 +1,7 @@
+name: CoreProtectAdvance
+version: 1.0
+main: hemok98.coreprotectadvance.CoreProtectAdvance
+api-version: 1.19
+prefix: CPa
+depend: [CoreProtect]
+authors: [Hemok98]
