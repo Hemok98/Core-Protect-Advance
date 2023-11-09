@@ -28,10 +28,8 @@ public class FixListener extends Queue implements Listener {
     public void beaconFix(InventoryClickEvent event){
         if (!(event.getInventory() instanceof BeaconInventory)) return;
         if ((event.getClickedInventory() instanceof BeaconInventory)) {
-            if ( BEACON_ITEMS.contains(event.getCursor().getType()) ) Bukkit.broadcastMessage(String.valueOf("cursor put"));
+            if ( BEACON_ITEMS.contains(event.getCursor().getType()) )  CoreProtect.getInstance().getAPI().logInteraction(event.getWhoClicked().getName(), event.getInventory().getLocation());
         }
-
-        CoreProtect.getInstance().getAPI().logInteraction(event.getWhoClicked().getName(), event.getInventory().getLocation());
 
     }
 
